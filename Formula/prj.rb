@@ -1,8 +1,8 @@
 class Prj < Formula
   desc "Fuzzy-pick a git repo and open it in your AI agent, editor or a herdr/tmux tab"
   homepage "https://github.com/lAvArt/prj"
-  url "https://github.com/lAvArt/prj/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "dd1cd4d6b747a9288c6ba270bdd68bace9591ea8b69e2ac51ad8801f8b8c32be"
+  url "https://github.com/lAvArt/prj/archive/refs/tags/v0.1.1.tar.gz"
+  sha256 "1c85df05a7b8bbd253179188a68d4bb53eb102db50e8455b9d4e1a082d6b0892"
   license "MIT"
 
   depends_on "fzf"
