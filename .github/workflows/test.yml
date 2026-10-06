@@ -1,0 +1,14 @@
+name: test
+on: [push, pull_request]
+jobs:
+  formula:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          mkdir -p "$(brew --repository)/Library/Taps/lavart"
+          ln -s "$GITHUB_WORKSPACE" "$(brew --repository)/Library/Taps/lavart/homebrew-tap"
+          brew install --formula lavart/tap/prj
+          brew test lavart/tap/prj
+          brew audit --strict lavart/tap/prj
+          prj --version
